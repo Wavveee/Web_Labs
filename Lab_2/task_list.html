@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список завдань</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f0f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2d5f2e;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-item:hover {
+            background-color: #efefef;
+        }
+
+        .task-item.completed {
+            opacity: 0.7;
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+            accent-color: #2d5f2e;
+        }
+
+        .task-item.completed .checkbox {
+            accent-color: #4caf50;
+        }
+
+        .task-text {
+            font-size: 16px;
+            color: #333;
+            flex: 1;
+        }
+
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+            display: none;
+        }
+
+        .task-item.completed .checkmark {
+            display: flex;
+        }
+
+        .task-item.completed .checkbox {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Список завдань</h1>
+        <ul class="task-list">
+            <li class="task-item completed">
+                <input type="checkbox" class="checkbox" checked>
+                <div class="checkmark">✓</div>
+                <span class="task-text">Опанувати HTML та CSS</span>
+            </li>
+            <li class="task-item completed">
+                <input type="checkbox" class="checkbox" checked>
+                <div class="checkmark">✓</div>
+                <span class="task-text">Опанувати Git та GitHub</span>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" class="checkbox">
+                <span class="task-text">Опанувати JavaScript</span>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" class="checkbox">
+                <span class="task-text">Опанувати Node.js</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const taskItems = document.querySelectorAll('.task-item');
+
+        taskItems.forEach(item => {
+            item.addEventListener('click', function () {
+                this.classList.toggle('completed');
+                const checkbox = this.querySelector('.checkbox');
+                checkbox.checked = !checkbox.checked;
+            });
+        });
+    </script>
+</body>
+
+</html>
