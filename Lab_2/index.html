@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Породи котів</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .breeds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .breed-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .breed-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .breed-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .breed-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .breed-origin {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .breed-content {
+            padding: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 100px;
+        }
+
+        .info-value {
+            color: #333;
+            text-align: right;
+        }
+
+        .description {
+            margin-top: 15px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🐱 Породи котів</h1>
+            <p class="subtitle">Довідник популярних породистих котів</p>
+        </header>
+
+        <div class="breeds-grid">
+            <!-- Персидський кіт -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Персидський</div>
+                    <div class="breed-origin">Іран</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Середній</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">3-6 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Довга</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Спокійний</span>
+                    </div>
+                    <div class="description">Популярна порода з довгою шерстю та плоским обличчям. Потребує регулярного
+                        грумінгу.</div>
+                </div>
+            </div>
+
+            <!-- Сіамський кіт -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Сіамський</div>
+                    <div class="breed-origin">Таїланд</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Малий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">2,5-5,5 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Коротка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Активний</span>
+                    </div>
+                    <div class="description">Розповідна та громадська порода з темною маскою та кінчиком хвоста. Любить
+                        спілкування.</div>
+                </div>
+            </div>
+
+            <!-- Мейн-Кун -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Мейн-Кун</div>
+                    <div class="breed-origin">США</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Великий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">5-11 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Середня/Довга</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Дружелюбний</span>
+                    </div>
+                    <div class="description">Одна з найбільших домашніх порід. Мудрі, ласкаві та добре вишколені.
+                        Люблять воду.</div>
+                </div>
+            </div>
+
+            <!-- Британський короткошерстий -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Британський короткошерстий</div>
+                    <div class="breed-origin">Велика Британія</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Середній</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">4-8 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Коротка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Врівноважений</span>
+                    </div>
+                    <div class="description">Спокійна й незалежна порода. Має компактне тіло та круглу голову. Легко
+                        адаптується.</div>
+                </div>
+            </div>
+
+            <!-- Бенгальська кішка -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Бенгальська</div>
+                    <div class="breed-origin">США</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Середній</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">3,5-6 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Коротка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Енергійний</span>
+                    </div>
+                    <div class="description">Гарна молода порода з леопардовим виглядом. Активні й розумні. Люблять
+                        грати та досліджувати.</div>
+                </div>
+            </div>
+
+            <!-- Рэгдолл -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Рэгдолл</div>
+                    <div class="breed-origin">США</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Великий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">3,5-6 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Довга</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Спокійний</span>
+                    </div>
+                    <div class="description">Великі голубоокі коти з помітною маскою. Дуже ласкаві й люблять бути
+                        близько до хозяйства.</div>
+                </div>
+            </div>
+
+            <!-- Абісинський кіт -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Абісинський</div>
+                    <div class="breed-origin">Ефіопія</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Малий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">2,5-4,5 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Коротка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Активний</span>
+                    </div>
+                    <div class="description">Стрункі й граціозні коти з гарною шерстю. Надзвичайно активні й люблять гру
+                        та пригоди.</div>
+                </div>
+            </div>
+
+            <!-- Сфінкс -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Сфінкс</div>
+                    <div class="breed-origin">Канада</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Малий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">2-5 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Без шерсті</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Товариський</span>
+                    </div>
+                    <div class="description">Унікальна лисуватість без шерсті. Потребує захисту від сонця й холоду. Дуже
+                        ласкаві.</div>
+                </div>
+            </div>
+
+            <!-- Скотиш-фолд -->
+            <div class="breed-card">
+                <div class="breed-header">
+                    <div class="breed-name">Скотиш-фолд</div>
+                    <div class="breed-origin">Шотландія</div>
+                </div>
+                <div class="breed-content">
+                    <div class="info-row">
+                        <span class="info-label">Розмір:</span>
+                        <span class="info-value">Малий</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Вага:</span>
+                        <span class="info-value">2,5-4 кг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Шерсть:</span>
+                        <span class="info-value">Коротка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Характер:</span>
+                        <span class="info-value">Спокійний</span>
+                    </div>
+                    <div class="description">Впізнавана за складеними вушами. Назва походить від природної мутації.
+                        Ласкаві й товариські.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
